@@ -1,3 +1,5 @@
+import json
+
 class node:
     # This is just a structure
     def __init__(self):
@@ -122,7 +124,7 @@ def main():
 
     h = HuffmanEncoding(text)
     # This object "h" has the encoded version of the given text with the huffman tree, char: freq pairs and char: huffman bit code pairs stored. Save the charCodes dictionary in a JSON file.
-    import json
+    
     with open('compressed.dat', 'w') as file:
         file.write(str(h.extraZerosAtEnd))
         file.write(h.finalString)
